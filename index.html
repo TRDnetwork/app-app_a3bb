@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>window.__SUPABASE_URL__="https://wmxnwapnfurwoalvkkwh.supabase.co";window.__SUPABASE_ANON_KEY__="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndteG53YXBuZnVyd29hbHZra3doIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU5MDgwODEsImV4cCI6MjA5MTQ4NDA4MX0.BNgF4LD35_Ooxtkv5Pok8ldrBeHPOCDauv-ZYG1v7_Q";</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Satoshi:wght@300..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#faf8f5',
+            surface: '#e9e5dd',
+            text: '#1a2e1a',
+            'text-dim': '#5a6d5a',
+            accent: '#e66000',
+            'accent-alt': '#ff8c42'
+          },
+          fontFamily: {
+            'display': ['Fraunces', 'serif'],
+            'body': ['Satoshi', 'sans-serif']
+          },
+          animation: {
+            'slide-up': 'slideUp 0.6s ease-out',
+            'pulse-hover': 'pulseHover 2s infinite',
+            'toast-slide': 'toastSlide 0.3s ease-out'
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            pulseHover: {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(230, 96, 0, 0.4)' },
+              '50%': { boxShadow: '0 0 0 8px rgba(230, 96, 0, 0)' }
+            },
+            toastSlide: {
+              '0%': { transform: 'translateY(100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #faf8f5;
+      color: #1a2e1a;
+      font-family: 'Satoshi', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .focus-glow:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(230, 96, 0, 0.3);
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      transition: transform 0.2s ease;
+    }
+    .text-dim {
+      color: #5a6d5a;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

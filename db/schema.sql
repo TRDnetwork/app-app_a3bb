@@ -1,0 +1,6 @@
+-- Portfolio Pro (app_a3bb) - Static Portfolio Site
+-- No database tables required at launch.
+-- This is a static portfolio site with a contact form.
+-- The contact form is handled server-side via a Vercel serverless function (api/send-email.ts) owned by the Email Agent.
+-- Supabase is reserved for potential future expansion (e.g., blog, project management).
+-- No RLS, storage, or realtime features are needed for the initial version.
